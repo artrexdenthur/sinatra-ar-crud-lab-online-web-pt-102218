@@ -16,6 +16,6 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/articles' do
-    @new_article = Article.create()
+    @new_article = Article.create( title: params["title"] content)
   end
 end
