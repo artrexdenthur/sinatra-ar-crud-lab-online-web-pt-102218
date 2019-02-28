@@ -1,4 +1,6 @@
 <h1>View Post <%=@article.id%></h1>
 <h2><%=@article.title%></h2>
 <p><%=@article.content%></p>
-<button type="button" action=
+<form action="/articles/<%= @article.id %>" method="post">
+  <input type="submit" name="delete" value="Delete" />  
+</form>
