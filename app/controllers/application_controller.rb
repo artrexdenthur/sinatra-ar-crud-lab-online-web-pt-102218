@@ -21,8 +21,12 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/articles/:id' do
-    @article = Article.find(params['id'])
-    erb :show
+    if Article.find(params['id']) 
+      @article = Article.find(params['id'])
+      erb :show
+    else
+      "No Article with id = #{params['id']}"
+    end
   end
   
   post '/articles' do
