@@ -30,4 +30,8 @@ class ApplicationController < Sinatra::Base
     # binding.pry
     redirect "/articles/#{@new_article.id}" 
   end
+  
+  get '/articles/:id/edit' do
+    
+  end
 end
